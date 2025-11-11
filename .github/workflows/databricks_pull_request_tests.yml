@@ -22,10 +22,11 @@ jobs:
 
           local-notebook-path: notebooks/run_unit_tests.py
 
-          compute-spec-json: >
+          new-cluster-json: >
             {
               "cluster_edition": "SINGLE_USER_STANDARD", 
               "spark_version": "14.3.x-scala2.12",
+              "num_workers": 1,
               "target_type": "serverless"
             }
 
