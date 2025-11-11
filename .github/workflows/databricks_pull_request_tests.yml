@@ -22,7 +22,7 @@ jobs:
 
           local-notebook-path: notebooks/run_unit_tests.py
 
-          existing-cluster-id: ${{ secrets.DATABRICKS_CLUSTER_ID }}
+          #existing-cluster-id: ${{ secrets.DATABRICKS_CLUSTER_ID }}
 
           git-commit: '${{ github.event.pull_request.head.sha }}'
 
