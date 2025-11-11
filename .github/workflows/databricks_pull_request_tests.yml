@@ -22,11 +22,7 @@ jobs:
 
           local-notebook-path: notebooks/run_unit_tests.py
 
-          new-cluster-json: >
-            {
-              "spark_version": "14.3.x-scala2.12",
-              "target_type": "serverless"
-            }
+          new-cluster-json: '{}'
 
           git-commit: '${{ github.event.pull_request.head.sha }}'
 
