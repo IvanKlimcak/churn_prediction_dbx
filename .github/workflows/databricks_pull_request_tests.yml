@@ -22,7 +22,12 @@ jobs:
 
           local-notebook-path: notebooks/run_unit_tests.py
 
-          #existing-cluster-id: ${{ secrets.DATABRICKS_CLUSTER_ID }}
+          compute-spec-json: >
+            {
+              "cluster_edition": "SINGLE_USER_STANDARD", 
+              "spark_version": "14.3.x-scala2.12",
+              "target_type": "serverless"
+            }
 
           git-commit: '${{ github.event.pull_request.head.sha }}'
 
